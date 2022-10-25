@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+export const initialState = {
   mesajeDeBienvenida: 'Hola',
   contador: 0,
 };
@@ -10,8 +10,8 @@ export const saludar = createSlice({
   initialState,
   reducers: {
     contadorSaludos: (state, { payload }) => {
-      const { contador } = state;
       const { increment } = payload;
+      const { contador } = state;
       state.contador = contador + increment;
     },
   },
